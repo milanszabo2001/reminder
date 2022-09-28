@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {pers} from './data'
+import { useState } from 'react'
+import {List} from './components/list'
 
 function App() {
+  console.log(pers)
+  const [people,setpeople]=useState(pers)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container border text-center">
+      <h4>Today birthdays</h4>
+      <List people={people}/>
     </div>
   );
 }
