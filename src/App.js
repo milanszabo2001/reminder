@@ -9,9 +9,9 @@ function App() {
   const [people,setpeople]=useState(pers)
 
   return (
-    <div className="container border text-center">
-      <h4>Today birthdays</h4>
-      <List people={people}/>
+    <div className="container text-center">
+      <h4>Today Birthdays</h4>
+      <List people={people} setpeople={setpeople}/>
     </div>
   );
 }
